@@ -1,0 +1,106 @@
+/* hero  */
+.hero {
+  position: relative;
+  text-align: center;
+  padding-top: 354px;
+  padding-bottom: 443px;
+  background-image: linear-gradient(to bottom,  rgba(5, 13, 29, 0.6) 11.95%, rgba(5, 13, 29, 0) 90.96%),
+    url('../images/Bitmap.jpg'), url('../images/nature.jpg'), url('../images/city.jpg');
+mix-blend-mode: normal;
+  height: 100vh;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-title {
+  margin-bottom: 25px;
+  margin-top: 0px;
+  @include Font($secondary-text-color, 600, 1.11, 30px);
+
+    @media screen and (min-width: 320px) {
+ margin-bottom: 60px;
+    @include Font($secondary-text-color, 600, 1.11, 45px);
+  }
+  
+  @media screen and (min-width: 1200px) {
+ margin-bottom: 25px;
+    @include Font($secondary-text-color, 600, 1.11, 90px);
+  }
+}
+
+.hero-description {
+  margin-top: 0px;
+@include Font($secondary-text-color, 600, 1.77, 18px);
+letter-spacing: 0.2px;
+ margin-bottom: 54px;
+}
+.order-button {
+  padding: 16px 23px;
+  min-width: 172px;
+  background-color: $title-text-color;
+align-items: center;
+ font-size: 18px;
+line-height: 1.22;
+text-align: center;
+letter-spacing: 0.1px;
+color: #F4FBF6;
+ border-radius: 27px;
+}
+.prev {
+  position: absolute;
+  top: 473px;
+  left: 25px;
+  font-size: 50px;
+  color: white;
+   @media screen and (min-width: 1200px) {
+   left: 169px;
+  }
+}
+.next {
+  position: absolute;
+  top: 473px;
+ right: 25px;
+  font-size: 50px;
+  color: white;
+   @media screen and (min-width: 1200px) {
+right: 169px;
+  }
+}
+.dots .material-icons{
+  // box-shadow:  #2acc45 0 0 0 1px;
+  // padding: 3px;
+  border-radius: 50%;
+  font-size: 13px;
+   color: white;
+&:not(:last-child){
+  margin-right: 15px;
+}
+}
+.dots{
+position: absolute;
+
+
+   top: 930px;
+    left:50%; 
+    margin-left:-38px;
+}
+.right-arrow {
+  fill: white;
+
+}
+.left-arrow {
+     fill: white;
+}
+// opacity="0.6"
+.dots .material-icons.iaActive {
+   box-shadow:  #2acc45 0 0 0 1px;
+  padding: 3px;
+  color: #2acc45 ;
+
+}
+.notActive {
+  opacity: 0.6;
+}

@@ -1,0 +1,146 @@
+// фон header и стиль текущей ссылки
+header {
+   position: fixed;
+  z-index: 2;
+width: 100%;
+
+}
+
+.main-nav-mobile-menu .container {
+    font-size: 18px;
+  @media screen and (min-width: 768px) {
+    @include Flex($jc: space-between);
+  }
+}
+.main-nav-mobile-menu {
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    position: static;
+  }
+}
+
+.site-nav {
+  display: block;
+     @media screen and (min-width: 768px) {
+    display: flex;
+    .item + .item {
+    margin-left: 70px;
+  }
+  }
+}
+.logo {
+  font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 1.14;
+color: $secondary-text-color;
+    @include Flex($ai: baseline);
+}
+.logo-image {
+  margin-right: 13px;
+}
+.site-nav .link {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 1.71;
+color: $secondary-text-color;
+ 
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.item .current::after {
+  display: flex;
+  width: 100%;
+  height: 1px;
+  content: ' ';
+ 
+  background-color: $secondary-text-color;
+  position: absolute;
+  margin-top: 1px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 2px;
+ 
+}
+
+.logo-window {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+     padding-top: 0px;
+  }
+}
+.backdrop-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0px;
+  z-index: 2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  &.is-open {
+    display: block;
+   font-weight: 600;
+font-size: 24px;
+line-height: 1.71;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    position: static;
+    box-shadow: none;
+    justify-content: space-between;
+    width: auto;
+  }
+}
+
+.mobile-logo-window .mobile-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-flex;
+  margin: 0px;
+
+  border: none;
+  background-color: transparent;
+
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.mobile-button .icon-cross {
+  display: none;
+}
+
+.mobile-button.is-open .icon-cross {
+  display: block;
+}
+
+.mobile-button.is-open .icon-menu {
+  display: none;
+}
+.mobile-button {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}

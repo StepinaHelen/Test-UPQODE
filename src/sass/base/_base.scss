@@ -1,0 +1,33 @@
+// Cтили примененные на html, .container, body, section , .list, .link, img
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+* ::after {
+  box-sizing: inherit;
+}
+body {
+  background-color: $secondary-text-color;
+  color: $primary-text-color;
+  font-family: $main-font;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+  margin:0px;
+}
+body.modal-open {
+  overflow: hidden;
+}
+.list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.link {
+  text-decoration: none;
+  display: block;
+}
+img {
+  display: block;
+}
